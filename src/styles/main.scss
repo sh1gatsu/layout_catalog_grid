@@ -1,5 +1,5 @@
 html {
-  font-family: Roboto, sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 body {
@@ -10,5 +10,23 @@ body {
   box-sizing: border-box;
 }
 
+@import "../styles/utils/variables.scss";
+
 @import "_header.scss";
 @import "_catalog.scss";
+
+@media (min-width: 488px) {
+  .catalog {
+    grid-template-columns: repeat(2, $card-width);
+  }
+}
+@media (min-width: 768px) {
+  .catalog {
+    grid-template-columns: repeat(3, $card-width);
+  }
+}
+@media (min-width: 1024px) {
+  .catalog {
+    grid-template-columns: repeat(4, $card-width);
+  }
+}
